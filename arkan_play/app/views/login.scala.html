@@ -1,0 +1,19 @@
+@()(implicit request: RequestHeader)
+@main("Login"){
+    <form method="get" action="validateLogin">
+        username :<input type="text" name="uname"/> 
+        <br>
+        password :<input type="password" name="pword"/>
+        <br>
+        <input type="submit" />
+    </form>
+    <br><br><br>
+    <form method="POST" action="studentreg">
+        @helper.CSRF.formField
+        Name: <input type="text" name="name" /><br><br>
+        gender: <input type="text" name="gender" /><br><br>
+        age: <input type="number" name="age" /><br><br>
+        <input type="submit"/>
+    </form>
+
+}

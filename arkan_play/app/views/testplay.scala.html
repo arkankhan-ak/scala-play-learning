@@ -1,0 +1,13 @@
+@(test: Seq[String])
+
+@main("This is Test play page") {
+  <h1>Hello from Test Play Dude!</h1>
+  <ul>
+      @for(item <- test){
+          <li>@item</li>
+      }
+  </ul>
+    <div>
+        <a href="@routes.TestPlay.logout()" >logout</a>
+    </div>
+}
